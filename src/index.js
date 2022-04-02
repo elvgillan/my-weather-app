@@ -20,22 +20,25 @@ let days = [
 let day = days[now.getDay()];
 h2.innerHTML = day + " " + hour + ":" + minutes;
 
-// Week 5 Homework (main challenge)
-
 function showWeather(response) {
-  console.log(response);
+  console.log(response.data);
   let submittedCity = document.querySelector("#city");
   let temp = document.querySelector("#current-temp");
   let humidity = document.querySelector("#humid");
   let wind = document.querySelector("#wind");
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
+  let mainIcon = document.querySelector("#main-icon");
   submittedCity.innerHTML = response.data.name;
   temp.innerHTML = `${Math.round(response.data.main.temp)}°`;
   maxTemp.innerHTML = Math.round(response.data.main.temp_max);
   minTemp.innerHTML = Math.round(response.data.main.temp_min);
   humidity.innerHTML = response.data.main.humidity;
-  wind.innerHTML = response.data.wind.speed;
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  mainIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
