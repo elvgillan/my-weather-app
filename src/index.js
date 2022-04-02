@@ -23,12 +23,14 @@ h2.innerHTML = day + " " + hour + ":" + minutes;
 function showWeather(response) {
   console.log(response.data);
   let submittedCity = document.querySelector("#city");
+  let condition = document.querySelector("#condition");
   let temp = document.querySelector("#current-temp");
   let humidity = document.querySelector("#humid");
   let wind = document.querySelector("#wind");
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
   let mainIcon = document.querySelector("#main-icon");
+  condition.innerHTML = response.data.weather[0].main;
   submittedCity.innerHTML = response.data.name;
   temp.innerHTML = `${Math.round(response.data.main.temp)}°`;
   maxTemp.innerHTML = Math.round(response.data.main.temp_max);
