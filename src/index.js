@@ -30,11 +30,14 @@ function showWeather(response) {
   let maxTemp = document.querySelector("#max-temp");
   let minTemp = document.querySelector("#min-temp");
   let mainIcon = document.querySelector("#main-icon");
+  celsiusTemp = response.data.main.temp;
+  maxCelsiusTemp = response.data.main.temp_max;
+  minCelsiusTemp = response.data.main.temp_min;
   condition.innerHTML = response.data.weather[0].main;
   submittedCity.innerHTML = response.data.name;
-  temp.innerHTML = `${Math.round(response.data.main.temp)}°`;
-  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
-  minTemp.innerHTML = Math.round(response.data.main.temp_min);
+  temp.innerHTML = Math.round(celsiusTemp);
+  maxTemp.innerHTML = Math.round(maxCelsiusTemp);
+  minTemp.innerHTML = Math.round(minCelsiusTemp);
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed);
   mainIcon.setAttribute(
@@ -76,8 +79,17 @@ button.addEventListener("click", currentLocation);
 
 function fLink(event) {
   event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   let fUnit = document.querySelector("#current-temp");
-  fUnit.innerHTML = "82°";
+  let fahrenheitMaxTemp = (maxCelsiusTemp * 9) / 5 + 32;
+  let fUnitMax = document.querySelector("#max-temp");
+  let fahrenheitMinTemp = (minCelsiusTemp * 9) / 5 + 32;
+  let fUnitMin = document.querySelector("#min-temp");
+  unitChangeC.classList.remove("active");
+  unitChangeF.classList.add("active");
+  fUnit.innerHTML = Math.round(fahrenheitTemp);
+  fUnitMax.innerHTML = Math.round(fahrenheitMaxTemp);
+  fUnitMin.innerHTML = Math.round(fahrenheitMinTemp);
 }
 let unitChangeF = document.querySelector("#fahrenheit");
 unitChangeF.addEventListener("click", fLink);
@@ -85,9 +97,20 @@ unitChangeF.addEventListener("click", fLink);
 function cLink(event) {
   event.preventDefault();
   let cUnit = document.querySelector("#current-temp");
-  cUnit.innerHTML = "28°";
+  let cUnitMax = document.querySelector("#max-temp");
+  let cUnitMin = document.querySelector("#min-temp");
+  unitChangeC.classList.add("active");
+  unitChangeF.classList.remove("active");
+  cUnit.innerHTML = Math.round(celsiusTemp);
+
+  cUnitMax.innerHTML = Math.round(maxCelsiusTemp);
+  cUnitMin.innerHTML = Math.round(minCelsiusTemp);
 }
 let unitChangeC = document.querySelector("#celsius");
 unitChangeC.addEventListener("click", cLink);
+
+let celsiusTemp = null;
+let maxCelsiusTemp = null;
+let minCelsiusTemp = null;
 
 searchCity("Sydney");
