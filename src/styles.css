@@ -6,12 +6,13 @@ body {
   margin: 0 auto;
   margin-top: 20px;
   max-width: 600px;
-  border: 1px solid #dbd8e3;
+  border: 1px solid #fff;
   padding: 20px 40px;
-  border-radius: 4px;
+  border-radius: 10px;
   background: #fff;
   font-family: Arial, Helvetica, sans-serif;
   color: #606470;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
 .search {
@@ -22,8 +23,14 @@ body {
 }
 
 .btn-one {
-  background-color: #769fcd;
+  background-color: #005792;
   margin: 0 auto;
+}
+
+.btn-one:hover {
+  background: #ec6e4c;
+  color: #fff;
+  transition: all 200ms ease-in-out;
 }
 
 h1 {
@@ -95,12 +102,12 @@ ul {
 }
 
 a {
-  color: #769fcd;
+  color: #005792;
   text-decoration: none;
 }
 
 a:hover {
-  color: #606470;
+  color: #ec6e4c;
   transition: all 200ms ease-in-out;
 }
 
