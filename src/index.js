@@ -20,6 +20,35 @@ let days = [
 let day = days[now.getDay()];
 h2.innerHTML = day + " " + hour + ":" + minutes;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="weather-forecast-day">${day}</div>
+              <img
+                src="http://openweathermap.org/img/wn/02d@2x.png"
+                alt="weather condition"
+                width="42"
+              />
+              <br />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperatures-high">18°</span>
+                | <span class="weather-forecast-temperatures-low">12°</span>
+              </div>
+            </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   console.log(response.data);
   let submittedCity = document.querySelector("#city");
@@ -99,3 +128,4 @@ let maxCelsiusTemp = null;
 let minCelsiusTemp = null;
 
 searchCity("Sydney");
+displayForecast();
