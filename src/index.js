@@ -113,40 +113,4 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function fLink(event) {
-  event.preventDefault();
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  let fUnit = document.querySelector("#current-temp");
-  let fahrenheitMaxTemp = (maxCelsiusTemp * 9) / 5 + 32;
-  let fUnitMax = document.querySelector("#max-temp");
-  let fahrenheitMinTemp = (minCelsiusTemp * 9) / 5 + 32;
-  let fUnitMin = document.querySelector("#min-temp");
-  unitChangeC.classList.remove("active");
-  unitChangeF.classList.add("active");
-  fUnit.innerHTML = Math.round(fahrenheitTemp);
-  fUnitMax.innerHTML = Math.round(fahrenheitMaxTemp);
-  fUnitMin.innerHTML = Math.round(fahrenheitMinTemp);
-}
-let unitChangeF = document.querySelector("#fahrenheit");
-unitChangeF.addEventListener("click", fLink);
-
-function cLink(event) {
-  event.preventDefault();
-  let cUnit = document.querySelector("#current-temp");
-  let cUnitMax = document.querySelector("#max-temp");
-  let cUnitMin = document.querySelector("#min-temp");
-  unitChangeC.classList.add("active");
-  unitChangeF.classList.remove("active");
-  cUnit.innerHTML = Math.round(celsiusTemp);
-
-  cUnitMax.innerHTML = Math.round(maxCelsiusTemp);
-  cUnitMin.innerHTML = Math.round(minCelsiusTemp);
-}
-let unitChangeC = document.querySelector("#celsius");
-unitChangeC.addEventListener("click", cLink);
-
-let celsiusTemp = null;
-let maxCelsiusTemp = null;
-let minCelsiusTemp = null;
-
 searchCity("Sydney");

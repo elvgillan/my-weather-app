@@ -80,10 +80,10 @@ ul {
   font-weight: bolder;
 }
 
-.switch {
-  font-size: 15px;
+.unit {
+  font-size: 20px;
   position: relative;
-  bottom: 43px;
+  bottom: 41px;
 }
 
 a {
