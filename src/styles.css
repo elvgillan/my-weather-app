@@ -11,7 +11,7 @@ body {
   border-radius: 10px;
   background: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  color: #606470;
+  color: #262626;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
@@ -23,12 +23,12 @@ body {
 }
 
 .btn-one {
-  background-color: #005792;
+  background-color: #ec6e4c;
   margin: 0 auto;
 }
 
 .btn-one:hover {
-  background: #ec6e4c;
+  background: #f6b7a6;
   color: #fff;
   transition: all 200ms ease-in-out;
 }
@@ -37,17 +37,14 @@ h1 {
   font-size: 50px;
   font-family: "Oswald", sans-serif;
   font-weight: bolder;
-  color: #262626;
 }
 
 h2 {
-  font-size: 25px;
-  color: #606470;
+  font-size: 20px;
 }
 
 h3 {
   font-size: 20px;
-  color: #606470;
 }
 
 .units {
@@ -56,20 +53,20 @@ h3 {
   top: -43px;
 }
 
-.divider {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 ul {
   list-style: none;
-  color: #606470;
   padding-top: 30px;
-  font-size: 15px;
+  font-size: 16px;
   padding-left: 35px;
 }
 
-.today-results {
-  color: #262626;
+h1 {
+  opacity: 0.9;
+}
+
+h2,
+ul {
+  opacity: 0.7;
 }
 
 .today-temp {
@@ -87,8 +84,9 @@ ul {
 }
 
 a {
-  color: #005792;
+  color: #262626;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
@@ -96,17 +94,16 @@ a:hover {
   transition: all 200ms ease-in-out;
 }
 
-.today-results .active {
-  color: #606470;
-  cursor: default;
-}
-
 .weather-forecast {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   color: 000;
   font-size: 13px;
+}
+.weather-forecast-day,
+.weather-forecast-temperatures-high {
+  opacity: 0.6;
 }
 
 .weather-forecast-day {
@@ -114,13 +111,11 @@ a:hover {
 }
 
 .weather-forecast-temperatures-high {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-.weather-forecast-day,
-.weather-forecast-temperatures-high,
 .weather-forecast-temperatures-low {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .footer {

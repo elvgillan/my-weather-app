@@ -1,5 +1,5 @@
 let now = new Date();
-let h2 = document.querySelector("h2");
+let currentTime = document.querySelector("#current-time");
 let hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
@@ -18,7 +18,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-h2.innerHTML = day + " " + hour + ":" + minutes;
+currentTime.innerHTML = day + " " + hour + ":" + minutes;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -55,7 +55,7 @@ function displayForecast(response) {
                 <span class="weather-forecast-temperatures-high">${Math.round(
                   forecastDay.temp.max
                 )}°</span>
-                | <span class="weather-forecast-temperatures-low">${Math.round(
+                <span class="weather-forecast-temperatures-low">${Math.round(
                   forecastDay.temp.min
                 )}°</span>
               </div>
