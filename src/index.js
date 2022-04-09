@@ -62,21 +62,6 @@ function handleSubmit(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function showLocation(location) {
-  let lat = location.coords.latitude;
-  let lon = location.coords.longitude;
-  let apiKey = "986838f19f5afa856e8061bfe8e9bfa7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeather);
-}
-
-function currentLocation() {
-  navigator.geolocation.getCurrentPosition(showLocation);
-}
-
-let button = document.querySelector("#current-button");
-button.addEventListener("click", currentLocation);
-
 function fLink(event) {
   event.preventDefault();
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
