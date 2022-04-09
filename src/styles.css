@@ -88,7 +88,6 @@ ul {
 
 .highest-lowest {
   font-size: 20px;
-  padding-top: 20px;
 }
 
 .max-temp-today {
@@ -114,59 +113,6 @@ a:hover {
 .today-results .active {
   color: #606470;
   cursor: default;
-}
-
-.fa-sun {
-  color: #ffd700;
-}
-.fa-cloud-sun {
-  color: #769fcd;
-}
-
-.fa-cloud-sun-rain {
-  color: #606470;
-}
-
-.fa-cloud-showers-heavy {
-  color: #262626;
-}
-
-.week-ahead {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 18px;
-}
-
-.max-col-title {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: right;
-  padding-bottom: 8px;
-}
-
-.min-col-title {
-  font-size: 16px;
-  text-align: center;
-  padding-bottom: 8px;
-}
-
-.emoji-col {
-  font-size: 22px;
-}
-
-.max-col {
-  font-weight: bold;
-}
-
-.emoji-col,
-.max-col {
-  text-align: right;
-  padding-bottom: 5px;
-}
-
-.min-col {
-  text-align: center;
-  padding-bottom: 5px;
 }
 
 .footer {

@@ -11,9 +11,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nanum+Gothic&family=Poppins:wght@500&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nanum+Gothic&family=Poppins:wght@500&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/14eb0c2fc2.js"
       crossorigin="anonymous"
@@ -32,78 +35,57 @@
                   type="search"
                   class="form-control shadow-sm"
                   placeholder="Enter city name"
-                  id = "city-input"
+                  id="city-input"
                 />
               </div>
             </div>
             <div class="col-2">
-              <button type="submit" class="btn btn-outline-light shadow-sm btn-one" id="sumbit-button">Search</button>
+              <button
+                type="submit"
+                class="btn btn-outline-light shadow-sm btn-one"
+                id="sumbit-button"
+              >
+                Search
+              </button>
             </div>
-            
           </div>
         </form>
         <h1 id="city"></h1>
         <h2></h2>
         <h3 id="condition"></h3>
         <div class="row today-results">
-          <div class="col-2"><img src="http://openweathermap.org/img/wn/04d@2x.png" alt="condition" id="main-icon"></div>
-          <div class="col-5 today-temp"><span id = "current-temp"></span><span class="switch"><a class="active" href="#" id ="celsius"> °C</a><span class="divider"> | </span><a class="fahrenheit-link" href="#" id = "fahrenheit">°F</a></span></div>
+          <div class="col-2">
+            <img
+              src="http://openweathermap.org/img/wn/04d@2x.png"
+              alt="condition"
+              id="main-icon"
+            />
+          </div>
+          <div class="col-5 today-temp">
+            <span id="current-temp"></span
+            ><span class="switch"
+              ><a class="active" href="#" id="celsius"> °C</a
+              ><span class="divider"> | </span
+              ><a class="fahrenheit-link" href="#" id="fahrenheit">°F</a></span
+            >
+          </div>
           <div class="col-5">
             <ul>
-              <li class = "phw">Humidity: <span id = "humid"></span>%</li>
-              <li class = "phw" >Wind: <span id = "wind"></span> km/hr</li>
+              <li class="phw">Humidity: <span id="humid"></span>%</li>
+              <li class="phw">Wind: <span id="wind"></span> km/hr</li>
             </ul>
           </div>
         </div>
         <div class="highest-lowest">
-          <span class="max-temp-today">Max <span id = "max-temp"></span>°</span>
-          <span class="low-temp-today">| Low <span id = "min-temp"></span>°</span>
-        </div>
-        
-        <div class="week-ahead">
-          <div class="row">
-            <div class="col-3"></div>
-            <div class="col-3 emoji-col"></i></div>
-            <div class="col-3 max-col-title">Max</div>
-            <div class="col-3 min-col-title">Low</div>
-          </div>
-          <div class="row tomorrow">
-            <div class="col-3">Tomorrow</div>
-            <div class="col-3 emoji-col"><i class="fas fa-cloud-sun"></i></div>
-            <div class="col-3 max-col">30°</div>
-            <div class="col-3 min-col">18°</div>
-          </div>
-          <div class="row day-two">
-            <div class="col-3">Tuesday</div>
-            <div class="col-3 emoji-col"><i class="fas fa-sun"></i></div>
-            <div class="col-3 max-col">31°</div>
-            <div class="col-3 min-col">21°</div>
-          </div>
-          <div class="row day-three">
-            <div class="col-3">Wednesday</div>
-            <div class="col-3 emoji-col">
-              <i class="fas fa-cloud-sun-rain"></i>
-            </div>
-            <div class="col-3 max-col">27°</div>
-            <div class="col-3 min-col">20°</div>
-          </div>
-          <div class="row day-four">
-            <div class="col-3">Thursday</div>
-            <div class="col-3 emoji-col"><i class="fas fa-cloud-showers-heavy"></i></div>
-            <div class="col-3 max-col">24°</div>
-            <div class="col-3 min-col">18°</div>
-          </div>
-          <div class="row day-five">
-            <div class="col-3">Friday</div>
-            <div class="col-3 emoji-col"><i class="fas fa-cloud-sun"></i></div>
-            <div class="col-3 max-col">28°</div>
-            <div class="col-3 min-col">19°</div>
-          </div>
+          <span class="max-temp-today">Max <span id="max-temp"></span>°</span>
+          <span class="low-temp-today">| Low <span id="min-temp"></span>°</span>
         </div>
       </div>
       <div class="footer">
-        <a href="https://github.com/elvgillan/my-weather-app" target="_blank">Open-source code</a> 
-         by
+        <a href="https://github.com/elvgillan/my-weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by
         <a href="https://www.linkedin.com/in/eringillan/" target="_blank">
           <strong>Erin Gillan</strong></a
         >
