@@ -20,7 +20,8 @@ let days = [
 let day = days[now.getDay()];
 h2.innerHTML = day + " " + hour + ":" + minutes;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -49,6 +50,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "986838f19f5afa856e8061bfe8e9bfa7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showWeather(response) {
   console.log(response.data);
   let submittedCity = document.querySelector("#city");
@@ -68,6 +76,8 @@ function showWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   mainIcon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -122,4 +132,3 @@ let maxCelsiusTemp = null;
 let minCelsiusTemp = null;
 
 searchCity("Sydney");
-displayForecast();
