@@ -56,17 +56,11 @@ function showWeather(response) {
   let temp = document.querySelector("#current-temp");
   let humidity = document.querySelector("#humid");
   let wind = document.querySelector("#wind");
-  let maxTemp = document.querySelector("#max-temp");
-  let minTemp = document.querySelector("#min-temp");
   let mainIcon = document.querySelector("#main-icon");
   celsiusTemp = response.data.main.temp;
-  maxCelsiusTemp = response.data.main.temp_max;
-  minCelsiusTemp = response.data.main.temp_min;
   condition.innerHTML = response.data.weather[0].main;
   submittedCity.innerHTML = response.data.name;
   temp.innerHTML = Math.round(celsiusTemp);
-  maxTemp.innerHTML = Math.round(maxCelsiusTemp);
-  minTemp.innerHTML = Math.round(minCelsiusTemp);
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed);
   mainIcon.setAttribute(
