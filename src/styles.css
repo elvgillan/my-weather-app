@@ -115,6 +115,27 @@ a:hover {
   cursor: default;
 }
 
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+  color: 000;
+  font-size: 13px;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+}
+
+.weather-forecast-temperatures-high {
+  font-weight: bold;
+}
+
+.weather-forecast-day,
+.weather-forecast-temperatures-high,
+.weather-forecast-temperatures-low {
+  opacity: 0.8;
+}
+
 .footer {
   text-align: center;
   padding-top: 10px;

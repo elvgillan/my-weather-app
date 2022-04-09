@@ -17,10 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nanum+Gothic&family=Poppins:wght@500&family=Roboto:wght@300;500&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/14eb0c2fc2.js"
-      crossorigin="anonymous"
-    ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Local Weather</title>
   </head>
@@ -79,6 +76,24 @@
         <div class="highest-lowest">
           <span class="max-temp-today">Max <span id="max-temp"></span>°</span>
           <span class="low-temp-today">| Low <span id="min-temp"></span>°</span>
+        </div>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-day">Sun</div>
+
+              <img
+                src="http://openweathermap.org/img/wn/02d@2x.png"
+                alt="weather condition"
+                width="42"
+              />
+              <br />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperatures-high">18°</span>
+                | <span class="weather-forecast-temperatures-low">12°</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer">
